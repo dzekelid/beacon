@@ -1,9 +1,18 @@
+---
 swagger: "2.0"
 x-collection-name: Google Beacons
-x-complete: 1
+x-complete: 0
 info:
-  title: Google Proximity Beacon
-  description: registers-manages-indexes-and-searches-beacons-
+  title: Google Proximity Beacon API Deactivate Beacon
+  description: |-
+    Deactivates a beacon. Once deactivated, the API will not return
+    information nor attachment data for the beacon when queried via
+    `beaconinfo.getforobserved`. Calling this method on an already inactive
+    beacon will do nothing (but will return a successful response code).
+
+    Authenticate using an [OAuth access token](https://developers.google.com/identity/protocols/OAuth2)
+    from a signed-in user with **Is owner** or **Can edit** permissions in the
+    Google Developers Console project.
   contact:
     name: Google
     url: https://google.com
@@ -252,29 +261,17 @@ paths:
           description: OK
       tags:
       - Beacon
-  /v1beta1/{beaconName}:decommission:
-    post:
-      summary: Decomission Beacon
-      description: |-
-        Decommissions the specified beacon in the service. This beacon will no
-        longer be returned from `beaconinfo.getforobserved`. This operation is
-        permanent -- you will not be able to re-register a beacon with this ID
-        again.
-
-        Authenticate using an [OAuth access token](https://developers.google.com/identity/protocols/OAuth2)
-        from a signed-in user with **Is owner** or **Can edit** permissions in the
-        Google Developers Console project.
-      operationId: proximitybeacon.beacons.decommission
-      x-api-path-slug: v1beta1beaconnamedecommission-post
-      parameters:
-      - in: path
-        name: beaconName
-        description: Beacon that should be decommissioned
-      - in: query
-        name: projectId
-        description: The project id of the beacon to decommission
-      responses:
-        200:
-          description: OK
-      tags:
-      - Beacon
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

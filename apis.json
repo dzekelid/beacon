@@ -1,0 +1,33 @@
+{
+	"name": "Streadata.io API Gallery - Beacon",
+	"description": "This is a repository of beacon APIs, self-contained as a Github repository, with HTML and YAML representations of the APIs and their surrounding operations.",
+	"image": "http://template.streamdata.gallery/assets/beacon.png",
+	"created": "2018-02-24",
+	"modified": "2018-08-27",
+	"url": "http://beacon.streamdata.gallery/apis.json",
+	"specificationVersion": "0.14",
+	"apis": [
+		{
+			"name": "Google Beacons",
+			"x-api-slug": "google-beacons",
+			"description": "Give your users better location and proximity experiences by providing a strong context signal for their devices in the form of Bluetooth low energy (BLE) beacons with Eddystone, the open beacon format from Google. The Google beacon platform enables you to manage your beacons remotely, integrate with Google services and help users devices to discover content and functionality across Android, native apps and the web.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-beacons.jpg",
+			"humanURL": "https://developers.google.com/beacons/",
+			"baseURL": "://proximitybeacon.googleapis.com//",
+			"tags": "Beacon",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/beacon/master/_listings/google-beacons/openapi.md"
+				}
+			]
+		}
+	],
+	"tags": "Beacon",
+	"include": [
+		{
+			"name": "Google Beacons",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/beacon/master/_listings/google-beacons/apis.yaml"
+		}
+	]
+}
